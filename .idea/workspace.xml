@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e78dd328-3f05-4cd0-87ab-01218b064f0f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/main/java/com/example/project/ProjectApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/main/java/com/example/project/ProjectApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/main/java/com/example/project/entity/Project.java" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/main/java/com/example/project/entity/Project.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,18 +15,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "Frenky777"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Frenky777&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/matokon/Java-Okon-Pakos.git",
-    "accountId": "0fce23af-bd4e-4027-a96f-8c12eed5cd36"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/matokon/Java-Okon-Pakos.git&quot;,
+    &quot;accountId&quot;: &quot;0fce23af-bd4e-4027-a96f-8c12eed5cd36&quot;
   }
-}]]></component>
+}</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/project/src/main/resources/application.properties" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -52,7 +49,7 @@
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "git-widget-placeholder": "frank",
+    "git-widget-placeholder": "mokon",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/mateu/source/repos/studies/Java-Okon-Pakos/project/src/main/java/com/example/project",
     "node.js.detected.package.eslint": "true",
