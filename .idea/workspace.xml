@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="714bdb74-a249-4629-82dd-f19536f78514" name="Changes" comment="">
+    <list default="true" id="e78dd328-3f05-4cd0-87ab-01218b064f0f" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/src/main/java/com/example/project/ProjectApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/main/java/com/example/project/ProjectApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/src/main/java/com/example/project/entity/Project.java" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/main/java/com/example/project/entity/Project.java" afterDir="false" />
@@ -17,6 +18,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "Frenky777"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/matokon/Java-Okon-Pakos.git",
+    "accountId": "0fce23af-bd4e-4027-a96f-8c12eed5cd36"
+  }
+}]]></component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/project/src/main/resources/application.properties" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -39,7 +52,7 @@
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "git-widget-placeholder": "mokon",
+    "git-widget-placeholder": "frank",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/mateu/source/repos/studies/Java-Okon-Pakos/project/src/main/java/com/example/project",
     "node.js.detected.package.eslint": "true",
@@ -58,25 +71,17 @@
       <recent name="C:\Users\mateu\source\repos\studies\Java-Okon-Pakos\project\src\main\java\com\example\project" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="Java-Okon-Pakos" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-30f59d01ecdd-2fc7cc6b9a17-intellij.indexing.shared.core-IU-253.31033.145" />
-        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-IU-253.31033.145" />
+        <option value="bundled-jdk-30f59d01ecdd-26cb7f24e5b0-intellij.indexing.shared.core-IU-253.29346.138" />
+        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-IU-253.29346.138" />
       </set>
     </attachedChunks>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="714bdb74-a249-4629-82dd-f19536f78514" name="Changes" comment="" />
+      <changelist id="e78dd328-3f05-4cd0-87ab-01218b064f0f" name="Changes" comment="" />
       <created>1774011212593</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
