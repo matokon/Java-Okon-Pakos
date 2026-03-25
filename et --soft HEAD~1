@@ -1,0 +1,129 @@
+[33mcommit 98ea8ecfd61e076fe77a9658004f7a09ea622d65[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmokon[m[33m)[m
+Author: Mateusz Okon <mateusz.okon04@gmail.com>
+Date:   Wed Mar 25 19:38:54 2026 +0100
+
+    feat: I added priority level polymorphism implementation
+
+[33mcommit 54f637b04a6a86ce70e03433dbeda396c7c0d5a8[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Merge: 25d064c 8968596
+Author: Mateusz Okoń <mateusz.okon04@gmail.com>
+Date:   Wed Mar 25 16:02:23 2026 +0100
+
+    Merge pull request #6 from matokon/feature/entity-task
+    
+    Zadanie 2 Dodano encje Task i Enum TaskType
+
+[33mcommit 8968596e99863facc86371f83ec41543f0c2b2c1[m[33m ([m[1;31morigin/feature/entity-task[m[33m)[m
+Author: Frenky777 <fpakos5@gmail.com>
+Date:   Wed Mar 25 12:45:44 2026 +0100
+
+    Zadanie 2 Dodano encje Task i Enum TaskType
+
+[33mcommit 25d064c1bc529f49d5aba00056c5d34048b1d879[m
+Merge: e3b4cb9 8c6f53d
+Author: Frenky777 <89804963+Frenky777@users.noreply.github.com>
+Date:   Wed Mar 25 12:13:09 2026 +0100
+
+    Merge pull request #5 from matokon/mokon
+    
+    feat: added new entity & edited old one Project entity
+
+[33mcommit 8c6f53d3dbd0754481a08417a29347749339a955[m[33m ([m[1;31morigin/mokon[m[33m)[m
+Author: Frenky777 <89804963+Frenky777@users.noreply.github.com>
+Date:   Wed Mar 25 12:11:16 2026 +0100
+
+    Update ProjectApplication.java
+    
+    typo, it doesn't compile because of that
+
+[33mcommit ca51aaea02119599036506deb6ea20a1261c5621[m
+Merge: 3434a18 e3b4cb9
+Author: Mateusz Okoń <mateusz.okon04@gmail.com>
+Date:   Wed Mar 25 09:13:09 2026 +0100
+
+    Merge branch 'main' into mokon
+
+[33mcommit 3434a183f467d52c233d94fcc38ab3913dfbceec[m
+Author: Mateusz Okon <mateusz.okon04@gmail.com>
+Date:   Wed Mar 25 09:05:35 2026 +0100
+
+    feat: added new entity & edited old one Project entity
+
+[33mcommit e3b4cb94249dee838fce3468918a1706485d9cd1[m[33m ([m[1;31morigin/feature/entities-project-users[m[33m)[m
+Merge: 05ac79c 0bcbc89
+Author: Mateusz Okoń <mateusz.okon04@gmail.com>
+Date:   Tue Mar 24 20:36:09 2026 +0100
+
+    Merge pull request #4 from matokon/frank
+    
+    Dodano ProjectRepository i adnotacje konfiguracyjne
+
+[33mcommit 0bcbc89266baf0db36c6f06d550144b3ab9cd36e[m[33m ([m[1;31morigin/frank[m[33m)[m
+Author: Frenky777 <fpakos5@gmail.com>
+Date:   Tue Mar 24 20:32:29 2026 +0100
+
+    Dodano ProjectRepository i adnotacje konfiguracyjne
+
+[33mcommit 05ac79c871b0cba44fe0b388c9a6924e469925b1[m
+Merge: 301d646 9949189
+Author: Frenky777 <89804963+Frenky777@users.noreply.github.com>
+Date:   Tue Mar 24 20:18:05 2026 +0100
+
+    Merge pull request #3 from matokon/mokon
+    
+    feat: created new entity & test for it
+
+[33mcommit 994918957e6ce0be097d3ea8eeed4c95e52b4e9c[m
+Merge: 4b5c5fb 301d646
+Author: Mateusz Okoń <mateusz.okon04@gmail.com>
+Date:   Tue Mar 24 20:17:33 2026 +0100
+
+    Merge branch 'main' into mokon
+
+[33mcommit 4b5c5fb22346bc5e5e8462b0384a44f6783de655[m
+Author: Mateusz Okon <mateusz.okon04@gmail.com>
+Date:   Tue Mar 24 20:14:03 2026 +0100
+
+    feat: created new entity & test for it
+
+[33mcommit 301d646484e05e1b2a8592269030f314c3ed9f09[m[33m ([m[1;32mmain[m[33m)[m
+Merge: 5ea1741 9ebb661
+Author: Mateusz Okoń <mateusz.okon04@gmail.com>
+Date:   Fri Mar 20 13:42:54 2026 +0100
+
+    Merge pull request #2 from matokon/feature/fpakos
+    
+    Feature/fpakos
+
+[33mcommit 9ebb661572f209f9d4a79d5931d7eba2b23a7322[m
+Author: Frenky777 <fpakos5@gmail.com>
+Date:   Fri Mar 20 11:49:25 2026 +0100
+
+    Poprawka: czysty URL do bazy Neon i usunięcie błędów z properties
+
+[33mcommit eeca74c851baee77ae30e0869df2abe8563ad44f[m
+Author: Frenky777 <fpakos5@gmail.com>
+Date:   Fri Mar 20 11:23:20 2026 +0100
+
+    Zadanie 2: Dodano README i konfigurację Neona
+
+[33mcommit 5ea1741fb1f58d4e79659f444af09a1ea233b609[m
+Merge: 81c7af0 ce98135
+Author: Mateusz Okoń <mateusz.okon04@gmail.com>
+Date:   Sat Mar 7 11:46:32 2026 +0100
+
+    Merge pull request #1 from matokon/fpakos5
+    
+    dodanie ReadME, dodanie aplication properties
+
+[33mcommit ce9813593f60e834aa1034b08d85a47d8ae4a12e[m
+Author: Frenky777 <fpakos5@gmail.com>
+Date:   Sat Mar 7 11:43:16 2026 +0100
+
+    dodanie ReadME, dodanie aplication properties
+
+[33mcommit 81c7af04ff8bc891acc97db828d1389c9d91bb88[m
+Author: Mateusz Okon <mateusz.okon04@gmail.com>
+Date:   Sat Mar 7 11:03:24 2026 +0100
+
+    feat: Project Init
