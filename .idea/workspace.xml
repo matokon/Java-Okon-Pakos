@@ -5,9 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="714bdb74-a249-4629-82dd-f19536f78514" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/project/src/main/java/com/example/project/repository/ProjectRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/src/test/java/com/example/project/ProjectApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/main/java/com/example/project/ProjectApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/main/java/com/example/project/ProjectApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/src/main/java/com/example/project/entity/Project.java" beforeDir="false" afterPath="$PROJECT_DIR$/project/src/main/java/com/example/project/entity/Project.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +46,7 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.0",
@@ -81,7 +82,8 @@
       <option name="presentableId" value="Default" />
       <updated>1774011212593</updated>
       <workItem from="1774011214544" duration="2915000" />
-      <workItem from="1774369808450" duration="3802000" />
+      <workItem from="1774369808450" duration="5681000" />
+      <workItem from="1774382193575" duration="3288000" />
     </task>
     <servers />
   </component>
