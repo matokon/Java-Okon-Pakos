@@ -3,6 +3,7 @@ package com.example.project.service;
 import com.example.project.entity.User;
 import com.example.project.repository.UserRepository;
 import org.springframework.stereotype.Service;
+import org.springframework.http.ResponseEntity;
 
 import java.util.List;
 
@@ -23,4 +24,12 @@ public class UserService {
         return userRepository.save(user);
     }
 
+    public User updateUser(Long id, User updatedUser) {
+        updatedUser.setId(id);
+        return userRepository.save(updatedUser);
+    }
+
+    public void deleteUser(Long id) {
+        userRepository.deleteById(id);
+    }
 }

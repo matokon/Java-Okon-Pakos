@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.*;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
+import org.springframework.http.ResponseEntity;
 
 import java.util.List;
 
@@ -32,5 +33,29 @@ public class ProjectController {
             @RequestBody Project project
     ) {
         return projectRepository.save(project);
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<Project> updateProject(
+            @PathVariable Long id,
+            @RequestBody Project updatedProject
+    ) {
+        return projectRepository.findById(id)
+                .map(existing -> {
+                    updatedProject.setId(id);
+                    return ResponseEntity.ok(projectRepository.save(updatedProject));
+                })
+                .orElse(ResponseEntity.notFound().build());
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> deleteProject(
+            @PathVariable Long id
+    ) {
+        if (!projectRepository.existsById(id)) {
+            return ResponseEntity.notFound().build();
+        }
+        projectRepository.deleteById(id);
+        return ResponseEntity.noContent().build();
     }
 }
