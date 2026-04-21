@@ -21,7 +21,7 @@ public class ProjectController {
     }
 
     @GetMapping
-    @Operation(summary="Get all items")
+    @Operation(summary = "Get all items")
     public List<Project> getAllProjects() {
         return projectRepository.findAll();
     }
@@ -36,8 +36,15 @@ public class ProjectController {
     }
 
     @PutMapping("/{id}")
+    @Operation(
+        summary = "Update existing project",
+        description = "Updates a project by its ID. Returns 404 if not found."
+    )
     public ResponseEntity<Project> updateProject(
+            @Parameter(description = "ID of the project to update", required = true)
             @PathVariable Long id,
+
+            @Parameter(description = "Updated project data")
             @RequestBody Project updatedProject
     ) {
         return projectRepository.findById(id)
@@ -49,7 +56,12 @@ public class ProjectController {
     }
 
     @DeleteMapping("/{id}")
+    @Operation(
+        summary = "Delete a project",
+        description = "Deletes a project by its ID. Returns 404 if not found, 204 on success."
+    )
     public ResponseEntity<Void> deleteProject(
+            @Parameter(description = "ID of the project to delete", required = true)
             @PathVariable Long id
     ) {
         if (!projectRepository.existsById(id)) {

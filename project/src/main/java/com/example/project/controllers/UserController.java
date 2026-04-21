@@ -3,6 +3,7 @@ package com.example.project.controllers;
 import com.example.project.entity.User;
 import com.example.project.service.UserService;
 import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -29,17 +30,27 @@ public class UserController {
 
     @PostMapping("/create")
     @Operation(summary = "Create a new user", description = "Adds a new user to the database")
-    public ResponseEntity<User> addUser(@RequestBody User user) {
+    public ResponseEntity<User> addUser(
+            @Parameter(description = "User to create")
+            @RequestBody User user
+    ) {
         User createdUser = userService.createUser(user);
         return new ResponseEntity<>(createdUser, HttpStatus.CREATED);
     }
 
     @PutMapping("/{id}")
+    @Operation(
+        summary = "Update existing user",
+        description = "Updates a user by its ID. Returns 404 if not found."
+    )
     public ResponseEntity<User> updateUser(
+            @Parameter(description = "ID of the user to update", required = true)
             @PathVariable Long id,
+
+            @Parameter(description = "Updated user data")
             @RequestBody User updatedUser
     ) {
-        return userRepository.findById(id)
+        return userService.findById(id)
                 .map(existing -> {
                     return ResponseEntity.ok(userService.updateUser(id, updatedUser));
                 })
@@ -47,10 +58,15 @@ public class UserController {
     }
 
     @DeleteMapping("/{id}")
+    @Operation(
+        summary = "Delete a user",
+        description = "Deletes a user by its ID. Returns 404 if not found, 204 on success."
+    )
     public ResponseEntity<Void> deleteUser(
+            @Parameter(description = "ID of the user to delete", required = true)
             @PathVariable Long id
     ) {
-        if (!userRepository.existsById(id)) {
+        if (!userService.existsById(id)) {
             return ResponseEntity.notFound().build();
         }
         userService.deleteUser(id);
