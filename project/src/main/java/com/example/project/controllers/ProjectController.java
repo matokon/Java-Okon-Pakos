@@ -49,7 +49,6 @@ public class ProjectController {
     ) {
         return projectRepository.findById(id)
                 .map(existing -> {
-                    updatedProject.setId(id);
                     return ResponseEntity.ok(projectRepository.save(updatedProject));
                 })
                 .orElse(ResponseEntity.notFound().build());

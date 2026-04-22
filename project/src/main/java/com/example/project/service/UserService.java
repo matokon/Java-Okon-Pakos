@@ -25,8 +25,10 @@ public class UserService {
     }
 
     public User updateUser(Long id, User updatedUser) {
-        updatedUser.setId(id);
-        return userRepository.save(updatedUser);
+        return userRepository.findById(id).map(user -> {
+            user.setUsername(updatedUser.getUsername());
+            return userRepository.save(user);
+        }).orElse(null);
     }
 
     public void deleteUser(Long id) {
@@ -40,4 +42,5 @@ public class UserService {
     public boolean existsById(Long id) {
         return userRepository.existsById(id);
     }
+
 }
