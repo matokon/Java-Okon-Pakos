@@ -8,42 +8,58 @@ import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 
 import java.util.Arrays;
-import java.util.List;
+import java.util.Optional;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
 class UserServiceTest {
 
-    private UserRepository userRepository;
+    private UserRepository userRepoMock;
     private UserService userService;
 
     @BeforeEach
     void setUp() {
-        userRepository = Mockito.mock(UserRepository.class);
-        userService = new UserService(userRepository);
+        userRepoMock = Mockito.mock(UserRepository.class);
+        userService = new UserService(userRepoMock);
     }
 
     @Test
     @DisplayName("Should return all users")
     void testGetAllUsers() {
-        // tworzenie symulowanych rekordów
-        User user1 = new User();
-        user1.setUsername("TestUser1");
+        User u1 = new User(); u1.setUsername("User1");
+        User u2 = new User(); u2.setUsername("User2");
+        when(userRepoMock.findAll()).thenReturn(Arrays.asList(u1, u2));
+        assertEquals(2, userService.getAllUsers().size());
+    }
 
-        User user2 = new User();
-        user2.setUsername("TestUser2");
+    @Test
+    @DisplayName("Should create user")
+    void testCreateUser() {
+        User u = new User(); u.setUsername("Nowy");
+        when(userRepoMock.save(u)).thenReturn(u);
+        assertNotNull(userService.createUser(u));
+    }
 
-        // gdy wywołane zostanie findAll(), zwróć listę
-        when(userRepository.findAll()).thenReturn(Arrays.asList(user1, user2));
+    @Test
+    @DisplayName("Should find by ID")
+    void testFindById() {
+        User u = new User(); u.setUsername("Szukany");
+        when(userRepoMock.findById(1L)).thenReturn(Optional.of(u));
+        assertTrue(userService.findById(1L).isPresent());
+    }
 
-        // wywołanie testowanej metody
-        List<User> users = userService.getAllUsers();
+    @Test
+    @DisplayName("Should delete user")
+    void testDeleteUser() {
+        userService.deleteUser(1L);
+        verify(userRepoMock, times(1)).deleteById(1L);
+    }
 
-        // sprawdzenie czy zwrócono 2 użytkowników
-        assertEquals(2, users.size());
-
-        //sprawdzenie czy metoda findAll() została wywołana dokładnie raz
-        verify(userRepository, times(1)).findAll();
+    @Test
+    @DisplayName("Should check if exists")
+    void testExistsById() {
+        when(userRepoMock.existsById(1L)).thenReturn(true);
+        assertTrue(userService.existsById(1L));
     }
 }

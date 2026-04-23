@@ -81,4 +81,22 @@ class TaskServiceTest {
         taskService.deleteTask(5L);
         verify(taskRepoMock, times(1)).deleteById(5L);
     }
+    @Test
+    @DisplayName("Should update task")
+    void testUpdateTask() {
+        // i to samo dla taskow zeby podbic procenty
+        Task staryTask = new Task();
+        staryTask.setTitle("Stary tytul");
+
+        Task nowyTask = new Task();
+        nowyTask.setTitle("Nowy tytul");
+
+        when(taskRepoMock.findById(1L)).thenReturn(Optional.of(staryTask));
+        when(taskRepoMock.save(staryTask)).thenReturn(staryTask);
+
+        Task wynik = taskService.updateTask(1L, nowyTask);
+
+        assertNotNull(wynik);
+        assertEquals("Nowy tytul", wynik.getTitle());
+    }
 }

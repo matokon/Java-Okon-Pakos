@@ -87,4 +87,22 @@ class ProjectServiceTest {
         // i patrzymy czy faktycznie poszlo do repo
         verify(projectRepoMock, times(1)).deleteById(1L);
     }
+    @Test
+    @DisplayName("Should update project")
+    void testUpdateProject() {
+        // testujemy te metode z zadania 9
+        Project stare = new Project();
+        stare.setName("Stara nazwa");
+
+        Project nowe = new Project();
+        nowe.setName("Nowa nazwa");
+
+        when(projectRepoMock.findById(1L)).thenReturn(Optional.of(stare));
+        when(projectRepoMock.save(stare)).thenReturn(stare);
+
+        Project wynik = projectService.updateProject(1L, nowe);
+
+        assertNotNull(wynik);
+        assertEquals("Nowa nazwa", wynik.getName());
+    }
 }
