@@ -5,7 +5,7 @@ import com.example.project.repository.TaskRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-
+import java.util.Optional;
 @Service
 public class TaskService {
 
@@ -21,5 +21,22 @@ public class TaskService {
 
     public Task createTask(Task task) {
         return taskRepository.save(task);
+    }
+
+    public Optional<Task> getTaskById(Long id) {
+        return taskRepository.findById(id);
+    }
+
+    public void deleteTask(Long id) {
+        taskRepository.deleteById(id);
+    }
+
+    public Task updateTask(Long id, Task updatedTask) {
+        return taskRepository.findById(id).map(task -> {
+            task.setTitle(updatedTask.getTitle());
+            task.setDescription(updatedTask.getDescription());
+            task.setTaskType(updatedTask.getTaskType());
+            return taskRepository.save(task);
+        }).orElse(null);
     }
 }
