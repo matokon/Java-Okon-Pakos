@@ -50,4 +50,11 @@ public class Project {
     public void setDescription(String description) {
         this.description = description;
     }
+    public Set<User> getUsers() {
+        return users;
+    }
+
+    public void setUsers(Set<User> users) {
+        this.users = users;
+    }
 }

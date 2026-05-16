@@ -69,4 +69,21 @@ public class ProjectController {
         projectRepository.deleteById(id);
         return ResponseEntity.noContent().build();
     }
+    @PostMapping("/{id}/users")
+    @Operation(summary = "Assign user to a project")
+    public ResponseEntity<Project> assignUserToProject(
+            @Parameter(description = "ID of the project", required = true)
+            @PathVariable Long id,
+
+            @Parameter(description = "User to assign")
+            @RequestBody com.example.project.entity.User user
+    ) {
+        return projectRepository.findById(id)
+                .map(project -> {
+
+                    project.getUsers().add(user);
+                    return ResponseEntity.ok(projectRepository.save(project));
+                })
+                .orElse(ResponseEntity.notFound().build());
+    }
 }
